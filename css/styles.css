@@ -3130,7 +3130,8 @@ textarea.form-control-lg {
 
   .collapse.show{
     display: flex !important;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
+    flex-direction: column !important; /*neu test*/
   }
 
 .collapsing {
@@ -3568,6 +3569,11 @@ textarea.form-control-lg {
   font-weight: var(--bs-nav-link-font-weight);
   color: var(--bs-nav-link-color);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+  /*neu test*/
+  text-align: left !important;
+  padding: 0.5rem 1rem !important;
+
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
@@ -3728,6 +3734,10 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+
+  /*neu test*/
+  width: 100% !important;
+  align-items: flex-start !important;
 }
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
@@ -3738,8 +3748,8 @@ textarea.form-control-lg {
 
 .navbar-nav .dropdown-menu {
  position: absolute;
-    right: 0; /* Positioniert das Dropdown-Menü am rechten Rand */
-    left: auto; /* Verhindert, dass es am linken Rand ausgerichtet wird */
+    right: 0; 
+    left: auto; 
     text-align: right;
 }
 
@@ -10878,10 +10888,36 @@ header.masthead .post-heading .meta a {
   }
 }
 
+/*Probleme in der Navigation*/
+
 body {
-  padding-top: 5rem; /* Passt den Abstand an die Höhe der Navbar an */
+  padding-top: 5rem; 
 }
 
 .navbar {
-  z-index: 1030; /* Sicherstellen, dass die Navbar immer oben bleibt */
+  z-index: 1030; 
 }
+
+/*
+.btn-back{
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #d6d6d6;
+  color: #000;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btn-back:hover{
+  background-color: #c0c0c0;
+  color: #000;
+}
+
+.button-container{
+  text-align: left;
+  margin-left: 10px;
+}
+  */
